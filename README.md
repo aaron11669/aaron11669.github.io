@@ -41,10 +41,11 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 *Add video of the robot arm spraying*
 
-<p float="left">
-  <img src="latitude_plots.png" width="40%" />
+<p>
+  <img src="latitude_plots.png" width="40%" style="margin-right:8%;" />
   <img src="longitude_plots.png" width="40%" />
 </p>
+
 
 *Shell thicknesses along the latitude and longitude of the shell. A much more consistant thickness can be observed in the robot arm sprayed shells.*
 
