@@ -11,23 +11,42 @@ My research interests lie in robot–environment interaction. As such, many of m
 ## Localization Of Spherical Robot Using ROS2 Package
 ## Custom Slope Detection Algorithm
 <!--
-Spherical robots show potential in descending slopes. The reason for this is that even uncontrolled descent of slopes will always result in the robot landing in the correct configuration to drive. In other words, a ball-shaped rover cannot be flipped upside down like a wheeled rover can.
+I worked on slope descent for a spherical robot, focusing on estimating both slope angle and uncertainty. To improve observability, I designed an external, actively actuated time of flight sensor module that continuously points toward the ground.
 
-Spherical robots often struggle with controlled descent of slopes. One of the many reasons for this is that the slope is often unobservable. To address this, we built a robotic system that attaches to the outside of the robot. This robotic sensor suite is actively driven so the 3D LiDAR sensor is always pointing at the floor.
+Due to strict compute and bandwidth constraints, I implemented a Gaussian mixture filter to estimate slope geometry and confidence directly on the sensor module. This allowed the descent controller to adapt its gains based on terrain quality and provided higher-quality inputs to global planners.
 
-Although this allowed for a good view of the slope angle, there was more that could be done with this time-of-flight sensor data. For example, the uncertainty was not quantified. This would mean that going down a concrete slope results in high slope certainty, while going down a rocky or gravel slope should indicate low certainty. The slope descent controller could then change its gains as a result of the slope’s uncertainty. Further, better measurements of uncertainty can be fed into global planners for improved localization accuracy.
+Notable Achevements:
++ Implemented real-time Gaussian mixture filtering under computational constraints
++ Derived sensor uncertainty models based on time-of-flight sensor geometry
 
-One limitation of our system was the fact that the computer on the external sensor suite had low computational power. Sending every data point to the more powerful computer was difficult due to the low bandwidth capability between the two. As such, I decided against a particle filter and instead settled on a Gaussian mixture filter.
+*Add a powerpoint plot*
+*Add the predict and the update steps*
+*Add photo of the remora*
+*EVENTUALLY add a video of it working*
 
-The derivation is shown below.
-
-The key takeaways are this: the predict step assumes that the ground is a linear slope, and the update step refines this assumption based on the time-of-flight sensor data.
-
-Because each of the 36 time-of-flight measurements is assumed to have independent Gaussian uncertainty, a simpler form of the Gaussian mixture filter can be used.
 -->
 
 
 ## Robot Arm Spraying
+<!--
+
+Spherical robot shells are manufactured using a spray process. Because this process is typically performed by hand, a lack of consistency led to control issues, including reduced control authority and increased sensitivity to the drive system. It also resulted in inconsistent control authority and sensitivity between robots, as well as unnecessary added mass.
+
+To improve this process, I replaced manual spraying with a robotic arm–based spraying system. This significantly improved shell consistency, which in turn improved control performance and allowed for the use of a less aggressive controller.
+
+Notable Achevements:
++ Automated both the spinner and the robot arm using ROS2
++ Derived equations to achieve different shell thicknesses as a function of spray speed
++ Implemented closed-loop thickness correction using a 3D surface map of the sphere
+
+*Add video of the robot arm spraying*
+
+*Add photo of spray profile*
+
+*Add photo of tool head*
+
+-->
+
 ## Modular Logging and Networking Systems
 ## Automatic Defrost Sequence
 ## Pressure Controller
