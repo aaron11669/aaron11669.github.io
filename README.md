@@ -32,10 +32,12 @@ Spherical robot shells are manufactured using a spray process. Because this proc
 
 To improve this process, I replaced manual spraying with a robotic arm–based spraying system. This significantly improved shell consistency, which in turn improved control performance and allowed for the use of a less aggressive controller.
 
-Notable Achevements:
+### Notable Achevements:
 + Automated both the spinner and the robot arm using ROS2
 + Derived equations to achieve different shell thicknesses as a function of spray speed
 + Implemented closed-loop thickness correction using a 3D surface map of the sphere
+
+### Media
 
 *Add video of the robot arm spraying*
 
