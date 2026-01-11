@@ -39,9 +39,12 @@ Notable Achevements:
 
 *Add video of the robot arm spraying*
 
-*Add photo of spray profile*
+<img src="latitude_plots.png" width="60%">
+<img src="longitude_plots.png" width="60%">
 
-*Add photo of tool head*
+<img src="sprayer mount.png" width="60%">
+*Robotic arm–mounted spray system used to manufacture consistent spherical robot shells.*
+
 
 ## Modular Logging and Networking Systems
 ## Automatic Defrost Sequence
