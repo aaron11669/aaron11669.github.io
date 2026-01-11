@@ -42,7 +42,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 *Add video of the robot arm spraying*
 
 <p>
-  <img src="latitude_plots.png" width="40%" style="margin-right:20%;" />
+  <img src="latitude_plots.png" width="40%" style="margin-right:12%;" />
   <img src="longitude_plots.png" width="40%" />
 </p>
 
