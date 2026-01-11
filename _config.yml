@@ -1,1 +1,9 @@
+title: Aaron Villanueva
+description: Personal site and projects
+theme: minima
 
+baseurl: ""
+url: "https://aaron11669.github.io"
+
+plugins:
+  - jekyll-seo-tag
