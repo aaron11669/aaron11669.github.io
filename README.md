@@ -16,7 +16,7 @@ I worked on slope descent for a spherical robot, focusing on estimating both slo
 Due to strict compute and bandwidth constraints, I implemented a Gaussian mixture filter to estimate slope geometry and confidence directly on the sensor module. This allowed the descent controller to adapt its gains based on terrain quality and provided higher-quality inputs to global planners.
 
 Notable Achevements:
-+ Implemented real-time Gaussian mixture filtering under computational constraints
++ Implemented real-time Gaussian mixture filtering with aggressive component trimming
 + Derived sensor uncertainty models based on time-of-flight sensor geometry
 
 *Add a powerpoint plot*
@@ -28,8 +28,6 @@ Notable Achevements:
 
 
 ## Robot Arm Spraying
-<!--
-
 Spherical robot shells are manufactured using a spray process. Because this process is typically performed by hand, a lack of consistency led to control issues, including reduced control authority and increased sensitivity to the drive system. It also resulted in inconsistent control authority and sensitivity between robots, as well as unnecessary added mass.
 
 To improve this process, I replaced manual spraying with a robotic arm–based spraying system. This significantly improved shell consistency, which in turn improved control performance and allowed for the use of a less aggressive controller.
@@ -44,8 +42,6 @@ Notable Achevements:
 *Add photo of spray profile*
 
 *Add photo of tool head*
-
--->
 
 ## Modular Logging and Networking Systems
 ## Automatic Defrost Sequence
