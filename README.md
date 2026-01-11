@@ -42,7 +42,7 @@ Notable Achevements:
 <img src="latitude_plots.png" width="60%">
 <img src="longitude_plots.png" width="60%">
 
-<img src="sprayer mount.png" width="60%">
+<img src="sprayer_mount.png" width="40%">
 *Robotic arm–mounted spray system used to manufacture consistent spherical robot shells.*
 
 
