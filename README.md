@@ -39,10 +39,15 @@ Notable Achevements:
 
 *Add video of the robot arm spraying*
 
-<img src="latitude_plots.png" width="60%">
-<img src="longitude_plots.png" width="60%">
+<p float="left">
+  <img src="latitude_plots.png" width="40%" />
+  <img src="longitude_plots.png" width="40%" />
+</p>
+
+*Shell thicknesses along the latitude and longitude of the shell. A much more consistant thickness can be observed in the robot arm sprayed shells.*
 
 <img src="sprayer_mount.png" width="40%">
+
 *Robotic arm–mounted spray system used to manufacture consistent spherical robot shells.*
 
 
