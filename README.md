@@ -52,7 +52,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 <img src="sprayer_mount.png" width="40%">
 
-*Robotic arm–mounted spray system used to manufacture consistent spherical robot shells.*
+*Robotic arm–mounted spray system.*
 
 
 ## Modular Logging and Networking Systems
