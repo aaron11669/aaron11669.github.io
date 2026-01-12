@@ -40,7 +40,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 ### Media
 
 <video width="60%" controls>
-  <source src="sprayer_mount.mpv" type="video/mp4">
+  <source src="arm_spray.mp4" type="video/mp4">
 </video>
 
 *Video of the robot arm spraying*
