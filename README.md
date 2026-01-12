@@ -39,7 +39,11 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 ### Media
 
-*Add video of the robot arm spraying*
+<video width="60%" controls>
+  <source src="sprayer_mount.mpv" type="video/mp4">
+</video>
+
+*Video of the robot arm spraying*
 
 <p>
   <img src="latitude_plots.png" width="40%" style="margin-right:12%;" />
