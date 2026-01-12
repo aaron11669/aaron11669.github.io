@@ -10,7 +10,12 @@ My professional interests lie in robot–environment interaction. As such, many 
 ## Projects
 
 <details>
-  <summary style="font-size:1.25em; font-weight:600;"><strong>Robotic Space Simulator KF/EKF/UKF</strong></summary>
+  <summary style="
+  font-size:1.25em;
+  font-weight:600;
+  cursor:pointer;
+  margin:0.5em 0;
+"><strong>Robotic Space Simulator KF/EKF/UKF</strong></summary>
 </details>
 
 <details>
