@@ -115,7 +115,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 <details class="project" markdown="1">
   <summary>Pressure Controller</summary>
 
-I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller automatically actuates a solenoid valve to regulate pressure and track a specified setpoint.
+I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller automatically controls a solenoid valve or a compressor to regulate pressure or track a specified setpoint.
 
 ### Notable Achievements
 
@@ -129,7 +129,7 @@ I designed and implemented a general-purpose pressure control system for laborat
   <source src="pressure.mp4" type="video/mp4">
 </video>
 
-*Video of Custom PCB Toolbox working via Steam Deck*
+*Video of Custom PCB Implementation working via Steam Deck*
 
 <img src="PCB_schematic.JPEG" width="100%">
 
