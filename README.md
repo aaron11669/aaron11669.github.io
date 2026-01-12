@@ -4,8 +4,8 @@ details.project > summary {
   list-style: none;
   cursor: pointer;
 
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 1.35em;
+  font-weight: 500;
   line-height: 1.2;
 
   margin: 1.4em 0 0.6em 0;
