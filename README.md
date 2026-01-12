@@ -34,7 +34,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 ### Notable Achevements:
 + Automated both the spinner and the robot arm using ROS2
-+ Derived equations to achieve different shell thicknesses as a function of spray speed
++ Derived kinematic equations to achieve different shell thicknesses as a function of spray speed
 + Implemented closed-loop thickness correction using a 3D surface map of the sphere
 
 ### Media
