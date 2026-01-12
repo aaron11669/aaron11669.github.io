@@ -76,12 +76,12 @@ I designed and implemented a general-purpose pressure control system for laborat
 
 *Video of Custom PCB Toolbox working via Steam Deck*
 
-<img src="PCB_schematic.JPEG" width="60%">
+<img src="PCB_schematic.JPEG" width="80%">
 *Custom PCB Schematic*
 
 <p>
-  <img src="PCB_layout.png" height="600" style="margin-right:12%;" />
-  <img src="PCB_manufactured.png" height="600" />
+  <img src="PCB_layout.png" height="300" style="margin-right:12%;" />
+  <img src="PCB_manufactured.png" height="300" />
 </p>
 
 *PCB Layout and Manufacturing into Generic Pressure Control Unit*
