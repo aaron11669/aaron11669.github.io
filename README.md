@@ -1,7 +1,7 @@
 --
 ## About Me
 
-![alt text](portrait.png)
+<img src="portrait.png" width="60%">
 
 I'm currently a Research Engineer II at the Texas A&M University Engineering Experiment Station. I have a B.S. in Mechanical Engineering from the University of California, Irvine. I am aproximately halfway through my part-time aerospace engineering master’s degree at Purdue University, where I am specializing in autonomy and control systems. Previously, I was an Operations Engineer at a robotics startup called Stellar Pizza. Before that, I interned at Tesla, SpaceX, and Northrop Grumman, primarily working on test engineering.
 
@@ -39,7 +39,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 ### Media
 
-<video width="60%" controls>
+<video width="80%" controls>
   <source src="arm_spray.mp4" type="video/mp4">
 </video>
 
