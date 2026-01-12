@@ -44,17 +44,15 @@ I'm currently a Research Engineer II at the Texas A&M University Engineering Exp
 
 My professional interests lie in robot–environment interaction. As such, many of my projects involve utilizing my understanding of control systems, perception/sensing, localization, and path planning. As I dive deeper into my studies, I am also beginning to utilize optimization-based approaches like model predictive control and graph-based localization.
 
-## Projects
-
-<details class="project">
+<details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF</summary>
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Localization Of Spherical Robot Using ROS2 Package</summary>
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Custom Slope Detection Algorithm</summary>
 
 <!--
@@ -70,10 +68,11 @@ Notable Achevements:
 *Add the predict and the update steps*
 *Add photo of the remora*
 *EVENTUALLY add a video of it working*
+
 -->
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Robot Arm Spraying</summary>
 
 Spherical robot shells are manufactured using a spray process. Because this process is typically performed by hand, a lack of consistency led to control issues, including reduced control authority and increased sensitivity to the drive system. It also resulted in inconsistent control authority and sensitivity between robots, as well as unnecessary added mass.
@@ -105,15 +104,15 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 *Robotic arm–mounted spray system.*
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Modular Logging and Networking Systems</summary>
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Automatic Defrost Sequence</summary>
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Pressure Controller</summary>
 
 I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller automatically actuates a solenoid valve to regulate pressure and track a specified setpoint.
@@ -144,7 +143,6 @@ I designed and implemented a general-purpose pressure control system for laborat
 *PCB Layout and Manufacturing into Generic Pressure Control Unit*
 </details>
 
-<details class="project">
+<details class="project" markdown="1">
   <summary>Machine Learning Pedestrian Navigation</summary>
 </details>
-
