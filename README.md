@@ -44,6 +44,8 @@ I'm currently a Research Engineer II at the Texas A&M University Engineering Exp
 
 My professional interests lie in robot–environment interaction. As such, many of my projects involve utilizing my understanding of control systems, perception/sensing, localization, and path planning. As I dive deeper into my studies, I am also beginning to utilize optimization-based approaches like model predictive control and graph-based localization.
 
+# Projects
+
 <details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF</summary>
 </details>
