@@ -80,8 +80,8 @@ I designed and implemented a general-purpose pressure control system for laborat
 *Custom PCB Schematic*
 
 <p>
-  <img src="PCB_layout.png" width="40%" style="margin-right:12%;" />
-  <img src="PCB_manufactured.png" width="40%" />
+  <img src="PCB_layout.png" height="600" style="margin-right:12%;" />
+  <img src="PCB_manufactured.png" height="600" />
 </p>
 
 *PCB Layout and Manufacturing into Generic Pressure Control Unit*
