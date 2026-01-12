@@ -74,7 +74,7 @@ I designed and implemented a general-purpose pressure control system for laborat
 ### Media
 
 <video width="80%" controls>
-  <source src="pressure.MP4" type="video/mp4">
+  <source src="pressure.mp4" type="video/mp4">
 </video>
 
 *Video of Custom PCB Toolbox working via Steam Deck*
