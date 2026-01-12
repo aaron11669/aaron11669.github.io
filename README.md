@@ -133,14 +133,14 @@ I designed and implemented a general-purpose pressure control system for laborat
 
 <img src="PCB_schematic.JPEG" width="100%">
 
-*Custom PCB Schematic*
+*PCB Schematic*
 
 <p>
   <img src="PCB_layout.png" height="300" style="margin-right:12%;" />
   <img src="PCB_manufactured.png" height="300" />
 </p>
 
-*PCB Layout and Manufacturing into Generic Pressure Control Unit*
+*PCB Layout and Manufactured PCB on Jetson Orin Nano*
 </details>
 
 <details class="project" markdown="1">
