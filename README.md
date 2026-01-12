@@ -36,7 +36,7 @@ details.project[open] {
 </style>
 
 --
-## About Me
+# About Me
 
 <img src="portrait.png" width="60%">
 
