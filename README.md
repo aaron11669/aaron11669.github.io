@@ -7,16 +7,18 @@ I'm currently a Research Engineer II at the Texas A&M University Engineering Exp
 
 My professional interests lie in robot–environment interaction. As such, many of my projects involve utilizing my understanding of control systems, perception/sensing, localization, and path planning. As I dive deeper into my studies, I am also beginning to utilize optimization-based approaches like model predictive control and graph-based localization.
 
+## Projects
+
 <details>
-  <summary><strong>Robotic Space Simulator KF/EKF/UKF</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Robotic Space Simulator KF/EKF/UKF</strong></summary>
 </details>
 
 <details>
-  <summary><strong>Localization Of Spherical Robot Using ROS2 Package</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Localization Of Spherical Robot Using ROS2 Package</strong></summary>
 </details>
 
 <details>
-  <summary><strong>Custom Slope Detection Algorithm</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Custom Slope Detection Algorithm</strong></summary>
 
 <!--
 I worked on slope descent for a spherical robot, focusing on estimating both slope angle and uncertainty. To improve observability, I designed an external, actively actuated time of flight sensor module that continuously points toward the ground.
@@ -38,7 +40,7 @@ Notable Achevements:
 
 
 <details>
-  <summary><strong>Robot Arm Spraying</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Robot Arm Spraying</strong></summary>
 
 Spherical robot shells are manufactured using a spray process. Because this process is typically performed by hand, a lack of consistency led to control issues, including reduced control authority and increased sensitivity to the drive system. It also resulted in inconsistent control authority and sensitivity between robots, as well as unnecessary added mass.
 
@@ -71,15 +73,15 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 
 <details>
-  <summary><strong>Modular Logging and Networking Systems</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Modular Logging and Networking Systems</strong></summary>
 </details>
 
 <details>
-  <summary><strong>Automatic Defrost Sequence</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Automatic Defrost Sequence</strong></summary>
 </details>
 
 <details>
-  <summary><strong>Pressure Controller</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Pressure Controller</strong></summary>
 
 I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller automatically actuates a solenoid valve to regulate pressure and track a specified setpoint.
 
@@ -112,5 +114,5 @@ I designed and implemented a general-purpose pressure control system for laborat
 
 
 <details>
-  <summary><strong>Machine Learning Pedestrian Navigation</strong></summary>
+  <summary style="font-size:1.25em; font-weight:600;"><strong>Machine Learning Pedestrian Navigation</strong></summary>
 </details>
