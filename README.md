@@ -79,7 +79,7 @@ I designed and implemented a general-purpose pressure control system for laborat
 
 *Video of Custom PCB Toolbox working via Steam Deck*
 
-<img src="PCB_schematic.JPEG" width="80%">
+<img src="PCB_schematic.JPEG" width="100%">
 
 *Custom PCB Schematic*
 
