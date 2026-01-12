@@ -73,7 +73,7 @@ I designed and implemented a general-purpose pressure control system for laborat
 
 ### Media
 
-<video width="80%" controls>
+<video width="30%" controls>
   <source src="pressure.mp4" type="video/mp4">
 </video>
 
