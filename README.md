@@ -49,15 +49,14 @@ My professional interests lie in robot–environment interaction. As such, many 
 <details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF</summary>
   
-</details>
-
 <details class="project" markdown="1">
   <summary>Custom Slope Detection Algorithm</summary>
 
-This algorithm estimates local terrain slope using onboard IMU orientation and a simple surface-normal model.
-It runs in real time and provides a slope estimate used for controller gains and navigation decisions.
+This algorithm estimates local terrain slope using IMU orientation and a surface-normal model.
+It is used to adapt controller gains and constrain localization on uneven terrain.
 
-#### Core logic (Python)
+<details class="code" markdown="1">
+  <summary><strong>View code snippet</strong></summary>
 
 ~~~python
 import numpy as np
@@ -69,16 +68,18 @@ def estimate_slope_deg(normal_vec: np.ndarray) -> float:
     """
     z_axis = np.array([0.0, 0.0, 1.0])
 
-    # cos(theta) = (n · z) / (||n|| ||z||)
-    cos_theta = float(np.dot(normal_vec, z_axis) / (np.linalg.norm(normal_vec) + 1e-12))
-    theta_rad = np.arccos(np.clip(cos_theta, -1.0, 1.0))
+    cos_theta = np.dot(normal_vec, z_axis) / (
+        np.linalg.norm(normal_vec) + 1e-12
+    )
 
+    theta_rad = np.arccos(np.clip(cos_theta, -1.0, 1.0))
     return float(np.degrees(theta_rad))
 ~~~
 
-
+</details>
 
 </details>
+
 
 
 <details class="project" markdown="1">
