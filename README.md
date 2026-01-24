@@ -61,7 +61,7 @@ For quick (around 40Hz) localization of the robot, I used a standard robotic loc
 Because the platform is a non-traditional rover, the standard configuration required significant customization. This included transforming IMU and magnetometer measurements into the Earth frame and incorporating platform-specific dynamics into the estimation pipeline to maintain filter consistency at high update rates.
 
 ### Notable Achevements
-+ Rapid integration and tuning enabled the team to meet aggressive project deadlines
++ Rapid integration and tuning enabled the team to meet aggressive demonstration deadlines
 + Extended EKF cross-covariance logic to enable water detection as a by-product of state estimation
 
 ### Media
@@ -122,7 +122,9 @@ void KinematicTransformer::magnetometer_callback(
   <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
 </video>
 
-*Video of path planning on the beach using simple dubins circle planner enabled by EKF/Robot localization package.*
+*Video of path planning on the beach using simple l1 planner enabled by EKF/Robot localization package.*
+
+
 
 
 ## Global Estimation Using Factor Graph SLAM:
