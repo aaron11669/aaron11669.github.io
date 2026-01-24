@@ -60,22 +60,52 @@ It is used to adapt controller gains and constrain localization on uneven terrai
 <details class="code" markdown="1">
   <summary><strong>View code snippet</strong></summary>
 
-~~~python
-import numpy as np
+~~~cpp
+// Convert magnetometer measurements into a yaw-only orientation estimate.
+// Roll and pitch are intentionally omitted to avoid magnetometer corruption
+// and are handled by a separate IMU function.
 
-def estimate_slope_deg(normal_vec: np.ndarray) -> float:
-    """
-    Estimate terrain slope angle (degrees) from a surface normal in world frame.
-    normal_vec: np.array([nx, ny, nz])
-    """
-    z_axis = np.array([0.0, 0.0, 1.0])
+void KinematicTransformer::magnetometer_callback(
+    const sensor_msgs::msg::MagneticField::SharedPtr msg)
+{
+    sensor_msgs::msg::Imu imu_msg;
+    imu_msg.header.frame_id = "robot";
+    imu_msg.header.stamp = this->get_clock()->now();
 
-    cos_theta = np.dot(normal_vec, z_axis) / (
-        np.linalg.norm(normal_vec) + 1e-12
-    )
+    // Project magnetic field onto horizontal plane
+    double mx = msg->magnetic_field.x;
+    double my = msg->magnetic_field.y;
+    double mz = msg->magnetic_field.z;
 
-    theta_rad = np.arccos(np.clip(cos_theta, -1.0, 1.0))
-    return float(np.degrees(theta_rad))
+    double norm_inv = 1.0 / std::sqrt(mx * mx + my * my);
+    mx *= norm_inv;
+    my *= norm_inv;
+    mz *= norm_inv;
+
+    tf2::Vector3 mag_sensor(mx, my, mz);
+
+    // Rotate into earth frame using current body orientation
+    tf2::Vector3 mag_earth = tf2::quatRotate(
+        tf2_quat.inverse(), mag_sensor); //tf2_quat is an output of imu callback and contains the IMU rotation
+
+    // Compute yaw from horizontal magnetic field
+    double yaw = std::atan2(mag_earth.y(), mag_earth.x());
+
+    tf2::Quaternion q;
+    q.setRotation(tf2::Vector3(0, 0, 1), yaw);
+
+    imu_msg.orientation.x = q.x();
+    imu_msg.orientation.y = q.y();
+    imu_msg.orientation.z = q.z();
+    imu_msg.orientation.w = q.w();
+
+    // Covariance explicitly provided for downstream sensor fusion
+    imu_msg.orientation_covariance = {
+        mag_orientation_cov[0], 0.0, 0.0,
+        0.0, mag_orientation_cov[1], 0.0,
+        0.0, 0.0, mag_orientation_cov[2]
+    };
+
 ~~~
 
 </details>
