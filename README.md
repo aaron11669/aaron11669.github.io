@@ -119,8 +119,6 @@ void KinematicTransformer::magnetometer_callback(
 
 </details>
 
-<details>
-
 <video width="60%" controls>
   <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
 </video>
