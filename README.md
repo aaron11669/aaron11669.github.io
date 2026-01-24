@@ -54,7 +54,7 @@ My professional interests lie in robot–environment interaction. As such, many 
 <details class="project" markdown="1">
   <summary>Localization Of Spherical Robot Using EKF and Factor Graph SLAM </summary>
 
-##Local Estimation Using EKF
+## Local Estimation Using EKF:
 
 For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions.
 
@@ -117,10 +117,9 @@ void KinematicTransformer::magnetometer_callback(
 
 ~~~
 
-## Global Estimation Using Factor Graph SLAM
-
-
 </details>
+
+## Global Estimation Using Factor Graph SLAM:
 
 </details>
 
