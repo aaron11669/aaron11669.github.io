@@ -118,7 +118,11 @@ void KinematicTransformer::magnetometer_callback(
 ~~~
 
 </details>
+<video width="30%" controls>
+  <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
+</video>
 
+*Video of path planning on the beach using simple dubins circle planner enabled by EKF/Robot localization package.*
 
 
 ## Global Estimation Using Factor Graph SLAM:
