@@ -52,8 +52,34 @@ My professional interests lie in robot–environment interaction. As such, many 
 </details>
 
 <details class="project" markdown="1">
-  <summary>Localization Of Spherical Robot Using Factor Graph SLAM </summary>
+  <summary>Custom Slope Detection Algorithm</summary>
+
+This algorithm estimates local terrain slope using onboard IMU orientation and a simple surface-normal model.
+It runs in real time and provides a slope estimate used for controller gains and navigation decisions.
+
+#### Core logic (Python)
+
+~~~python
+import numpy as np
+
+def estimate_slope_deg(normal_vec: np.ndarray) -> float:
+    """
+    Estimate terrain slope angle (degrees) from a surface normal in world frame.
+    normal_vec: np.array([nx, ny, nz])
+    """
+    z_axis = np.array([0.0, 0.0, 1.0])
+
+    # cos(theta) = (n · z) / (||n|| ||z||)
+    cos_theta = float(np.dot(normal_vec, z_axis) / (np.linalg.norm(normal_vec) + 1e-12))
+    theta_rad = np.arccos(np.clip(cos_theta, -1.0, 1.0))
+
+    return float(np.degrees(theta_rad))
+~~~
+
+
+
 </details>
+
 
 <details class="project" markdown="1">
   <summary>Custom Slope Detection Algorithm</summary>
@@ -137,9 +163,4 @@ I designed and implemented a general-purpose pressure control system for laborat
 </p>
 
 *PCB Layout and Manufactured PCB on Jetson Orin Nano*
-</details>
-
-
-
-
 </details>
