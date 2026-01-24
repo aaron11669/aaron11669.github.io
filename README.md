@@ -54,9 +54,17 @@ My professional interests lie in robot–environment interaction. As such, many 
 <details class="project" markdown="1">
   <summary>Localization Of Spherical Robot Using EKF and Factor Graph SLAM </summary>
 
-###Local Estimation Using EKF
+##Local Estimation Using EKF
 
-For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions. It required IMU/magnetometer transformations to the earth frame and dynamics calculations for the non-traditional rover.
+For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions.
+
+Because the platform is a non-traditional rover, the standard configuration required significant customization. This included transforming IMU and magnetometer measurements into the Earth frame and incorporating platform-specific dynamics into the estimation pipeline to maintain filter consistency at high update rates.
+
+### Notable Achevements
++ Rapid integration and tuning enabled the team to meet aggressive project deadlines
++ Extended EKF cross-covariance logic to enable water detection as a by-product of state estimation
+
+### Media
 
 <details class="code" markdown="1">
   <summary><strong>View code snippet</strong></summary>
@@ -109,7 +117,7 @@ void KinematicTransformer::magnetometer_callback(
 
 ~~~
 
-### Global Estimation Using Factor Graph SLAM
+## Global Estimation Using Factor Graph SLAM
 
 
 </details>
