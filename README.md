@@ -52,10 +52,9 @@ My professional interests lie in robot–environment interaction. As such, many 
 
   
 <details class="project" markdown="1">
-  <summary>Custom Slope Detection Algorithm</summary>
+  <summary>Localization Of Spherical Robot Using EKF and Factor Graph SLAM </summary>
 
-This algorithm estimates local terrain slope using IMU orientation and a surface-normal model.
-It is used to adapt controller gains and constrain localization on uneven terrain.
+For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions. It required IMU/magnetometer transformations to the earth frame and dynamics calculations for the non-traditional rover.
 
 <details class="code" markdown="1">
   <summary><strong>View code snippet</strong></summary>
