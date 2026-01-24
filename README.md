@@ -52,7 +52,7 @@ My professional interests lie in robot–environment interaction. As such, many 
 </details>
 
 <details class="project" markdown="1">
-  <summary>Localization Of Spherical Robot Using ROS2 Package</summary>
+  <summary>Localization Of Spherical Robot Using Factor Graph SLAM </summary>
 </details>
 
 <details class="project" markdown="1">
@@ -107,13 +107,6 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 *Robotic arm–mounted spray system.*
 </details>
 
-<details class="project" markdown="1">
-  <summary>Modular Logging and Networking Systems</summary>
-</details>
-
-<details class="project" markdown="1">
-  <summary>Automatic Defrost Sequence</summary>
-</details>
 
 <details class="project" markdown="1">
   <summary>Pressure Controller</summary>
@@ -146,21 +139,6 @@ I designed and implemented a general-purpose pressure control system for laborat
 *PCB Layout and Manufactured PCB on Jetson Orin Nano*
 </details>
 
-<details class="project" markdown="1">
-  <summary>Machine Learning Pedestrian Navigation</summary>
-
-Foot-mounted inertial navigation systems suffer from rapid drift and sensitivity to motion type, limiting their effectiveness in GPS-denied environments. Classical approaches such as EKF and Zero-Velocity Updates mitigate this drift but rely on fixed thresholds and covariance parameters that vary with activity (standing, walking, running).
-
-In this project, I investigated whether additional IMU data from wearable devices could improve activity classification and enable more adaptive navigation filtering. While prior work typically relies only on a foot-mounted IMU, these tests added in watch mounted and pocket/phone mounted IMU sensors.
-
-I collected and synchronized a multi-IMU dataset (shoe, watch, phone) at 100 Hz across standing, walking, and running trials. A deep LSTM-based classifier was trained on multiple sensor configurations to evaluate the impact of multi-device fusion.
-
-### Notable Achievements
-+ Achieved 98% classification accuracy using combined shoe + watch + phone data
-+ Outperformed the foot-mounted IMU only baseline (≈95%) using multi-sensor fusion
-+ Demonstrated that more inertial sensors provide meaningful information for pedestrian navigation
-
-### Media
 
 
 
