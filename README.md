@@ -119,6 +119,9 @@ void KinematicTransformer::magnetometer_callback(
 
 </details>
 
+*Click above to see code snippet detailing IMU transformation code.*
+
+
 <video width="60%" controls>
   <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
 </video>
