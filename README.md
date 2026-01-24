@@ -48,6 +48,8 @@ My professional interests lie in robot–environment interaction. As such, many 
 
 <details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF</summary>
+</details>
+
   
 <details class="project" markdown="1">
   <summary>Custom Slope Detection Algorithm</summary>
