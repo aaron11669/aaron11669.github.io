@@ -124,7 +124,12 @@ void KinematicTransformer::magnetometer_callback(
 
 *Video of path planning on the beach using simple l1 planner enabled by EKF/Robot localization package.*
 
+</details>
+<video width="60%" controls>
+  <source src="foxglove_localization_visualizer.mp4" type="video/mp4">
+</video>
 
+*Foxglove Visualization of Robot Localizing (URDF Missing/low res = needs to be updated)*
 
 
 ## Global Estimation Using Factor Graph SLAM:
