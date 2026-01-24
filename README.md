@@ -129,7 +129,7 @@ void KinematicTransformer::magnetometer_callback(
   <source src="foxglove_localization_visualizer.mp4" type="video/mp4">
 </video>
 
-*Foxglove Visualization of Robot Localizing (URDF Missing/low res = needs to be updated)*
+*Foxglove Visualization of Robot Localizing in high bay (URDF Missing/low res = needs to be updated)*
 
 
 ## Global Estimation Using Factor Graph SLAM:
