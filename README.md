@@ -47,6 +47,10 @@ My professional interests lie in robot–environment interaction. As such, many 
 # Projects
 
 <details class="project" markdown="1">
+  <summary>Rover Leg Optimal Impedance Controler Design</summary>
+</details>
+
+<details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF</summary>
 </details>
 
@@ -122,7 +126,7 @@ void KinematicTransformer::magnetometer_callback(
 *Click above to see code snippet detailing IMU transformation code.*
 
 
-<video width="60%" controls>
+<video width="80%" controls>
   <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
 </video>
 
