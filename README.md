@@ -47,11 +47,11 @@ My professional interests lie in robot–environment interaction. As such, many 
 # Projects
 
 <details class="project" markdown="1">
-  <summary>Rover Leg Optimal Impedance Controler Design</summary>
+  <summary>Rover Leg Optimal Impedance Controler Design (WIP)</summary>
 </details>
 
 <details class="project" markdown="1">
-  <summary>Robotic Space Simulator KF/EKF/UKF</summary>
+  <summary>Robotic Space Simulator KF/EKF/UK (WIP) F</summary>
 </details>
 
   
@@ -60,13 +60,20 @@ My professional interests lie in robot–environment interaction. As such, many 
 
 ## Local Estimation Using EKF:
 
-For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions.
+### Problemem
+
+The robot did not know where it was. We had to demonstrate low level autonomy for a military customer in a little over a month.
+
+### What I did
+
+For quick (around 40Hz) localization of the robot, I used a standard robotic localization package called "ROS2 Robot localization" (https://github.com/cra-ros-pkg/robot_localization). This utilized an EKF and allowed for quick relatively continuous localization for rapid control and pathing decisions using the existing sensor suite.
 
 Because the platform is a non-traditional rover, the standard configuration required significant customization. This included transforming IMU and magnetometer measurements into the Earth frame and incorporating platform-specific dynamics into the estimation pipeline to maintain filter consistency at high update rates.
 
 ### Notable Achevements
 + Rapid integration and tuning enabled the team to meet aggressive demonstration deadlines
 + Extended EKF cross-covariance logic to enable water detection as a by-product of state estimation
++ Won a paid research contract with the military customer
 
 ### Media
 
@@ -146,7 +153,7 @@ void KinematicTransformer::magnetometer_callback(
 
 
 <details class="project" markdown="1">
-  <summary>Custom Slope Detection Algorithm</summary>
+  <summary>Custom Slope Detection Algorithm (WIP) </summary>
 
 <!--
 I worked on slope descent for a spherical robot, focusing on estimating both slope angle and uncertainty. To improve observability, I designed an external, actively actuated time of flight sensor module that continuously points toward the ground.
