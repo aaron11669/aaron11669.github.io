@@ -60,7 +60,7 @@ My professional interests lie in robot–environment interaction. As such, many 
 
 ## Local Estimation Using EKF:
 
-### Problemem
+### Problem Statement
 
 The robot did not know where it was. We had to demonstrate low level autonomy for a military customer in a little over a month.
 
@@ -175,7 +175,11 @@ Notable Achevements:
 <details class="project" markdown="1">
   <summary>Robot Arm Spraying</summary>
 
+### Problem Statement
+
 Spherical robot shells are manufactured using a spray process. Because this process is typically performed by hand, a lack of shell consistency can lead to control issues, including reduced control authority and increased sensitivity to the drive system. It also resulted in inconsistent control authority and sensitivity between robots.
+
+### What I did
 
 To improve this process, I replaced manual spraying with a robotic arm–based spraying system. This significantly improved shell consistency, which in turn improved control performance and allowed for the use of a less aggressive controller.
 
@@ -208,7 +212,17 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 <details class="project" markdown="1">
   <summary>Pressure Controller</summary>
 
-I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller automatically controls a solenoid valve or a compressor to regulate pressure or track a changing setpoint.
+### Problem Statement
+
+A general pressure control system was needed in the lab. Here were some of the projects that requested such a thing:
+
++ Inflate and deflate shperical inflatable rover (shown in my other projects)
++ Blow mars and lunar regolith simulant into custom motors for extended period of time
++ Cycle testing of robot that uses inflatable baloon
+
+### What I did
+
+I designed and implemented a general-purpose pressure control system for laboratory use. The system includes a custom PCB and embedded software, and interfaces directly with the 40-pin GPIO header of an NVIDIA Jetson or Raspberry Pi. Once configured, the controller uses a custom ROS2 Interface to controll a solenoid valve or a compressor to regulate pressure or track a changing setpoint.
 
 ### Notable Achievements
 
