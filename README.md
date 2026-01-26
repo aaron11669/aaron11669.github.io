@@ -51,7 +51,7 @@ My professional interests lie in robot–environment interaction. As such, many 
 </details>
 
 <details class="project" markdown="1">
-  <summary>Robotic Space Simulator KF/EKF/UK (WIP) F</summary>
+  <summary>Robotic Space Simulator KF/EKF/UKF (WIP) </summary>
 </details>
 
   
