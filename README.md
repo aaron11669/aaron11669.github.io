@@ -56,9 +56,7 @@ My professional interests lie in robot–environment interaction. As such, many 
 
   
 <details class="project" markdown="1">
-  <summary>Localization Of Spherical Robot Using EKF and Factor Graph SLAM </summary>
-
-## Local Estimation Using EKF:
+  <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
 
 ### Problem Statement
 
@@ -145,9 +143,10 @@ void KinematicTransformer::magnetometer_callback(
 
 *Foxglove Visualization of Robot Localizing in high bay (URDF Missing/low res = needs to be updated)*
 
+</details>
 
-## Global Estimation Using Factor Graph SLAM:
-
+<details class="project" markdown="1">
+  <summary>Global Localization Of Spherical Robot Using Factor Graphs (WIP) </summary>
 </details>
 
 <details class="project" markdown="1">
