@@ -150,28 +150,6 @@ void KinematicTransformer::magnetometer_callback(
 
 </details>
 
-
-<!--
-<details class="project" markdown="1">
-  <summary>Custom Slope Detection Algorithm (WIP) </summary>
-
-
-I worked on slope descent for a spherical robot, focusing on estimating both slope angle and uncertainty. To improve observability, I designed an external, actively actuated time of flight sensor module that continuously points toward the ground.
-
-Due to strict compute and bandwidth constraints, I implemented a Gaussian mixture filter to estimate slope geometry and confidence directly on the sensor module. This allowed the descent controller to adapt its gains based on terrain quality and provided higher-quality inputs to global planners.
-
-Notable Achevements:
-+ Implemented real-time Gaussian mixture filtering with aggressive component trimming
-+ Derived sensor uncertainty models based on time-of-flight sensor geometry
-
-*Add a powerpoint plot*
-*Add the predict and the update steps*
-*Add photo of the remora*
-*EVENTUALLY add a video of it working*
-
--->
-</details>
-
 <details class="project" markdown="1">
   <summary>Robot Arm Spraying</summary>
 
