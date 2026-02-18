@@ -137,7 +137,7 @@ void KinematicTransformer::magnetometer_callback(
 
 *Video of path planning on the beach using simple l1 planner enabled by EKF/Robot localization package.*
 
-<video width="60%" controls>
+<video width="80%" controls>
   <source src="ekf_localization.mp4" type="video/mp4">
 </video>
 
