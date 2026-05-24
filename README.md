@@ -54,6 +54,13 @@ My professional interests lie in robot–environment interaction. As such, many 
   <summary>Robotic Space Simulator KF/EKF/UKF (WIP) </summary>
 </details>
 
+<details class="project" markdown="1">
+  <summary>Jumping Spherical Robots with Optimal Controller (WIP) </summary>
+</details>
+
+<details class="project" markdown="1">
+  <summary>IssacSim Simulation (WIP) </summary>
+</details>
   
 <details class="project" markdown="1">
   <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
