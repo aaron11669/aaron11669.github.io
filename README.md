@@ -47,10 +47,6 @@ My professional interests lie in robot–environment interaction. As such, many 
 # Projects
 
 <details class="project" markdown="1">
-  <summary>Rover Leg Optimal Impedance Controler Design (WIP)</summary>
-</details>
-
-<details class="project" markdown="1">
   <summary>Robotic Space Simulator KF/EKF/UKF (WIP) </summary>
 </details>
 
@@ -61,8 +57,14 @@ My professional interests lie in robot–environment interaction. As such, many 
 <details class="project" markdown="1">
   <summary>IssacSim Simulation (WIP) </summary>
 </details>
-  
+
+
+
+*Click above to see MATLAB code snippet detailing how I obtained the kinematics for a spherical robot on a slope.*
 <details class="project" markdown="1">
+  
+</details>
+
   <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
 
 ### Problem Statement
@@ -82,62 +84,6 @@ Because the platform is a non-traditional rover, the standard configuration requ
 
 ### Media
 
-<details class="code" markdown="1">
-  <summary><strong>View code snippet</strong></summary>
-
-~~~cpp
-// Convert magnetometer measurements into a yaw-only orientation estimate.
-// Roll and pitch are intentionally omitted to avoid magnetometer corruption
-// and are handled by a separate IMU function.
-
-void KinematicTransformer::magnetometer_callback(
-    const sensor_msgs::msg::MagneticField::SharedPtr msg)
-{
-    sensor_msgs::msg::Imu imu_msg;
-    imu_msg.header.frame_id = "robot";
-    imu_msg.header.stamp = this->get_clock()->now();
-
-    // Project magnetic field onto horizontal plane
-    double mx = msg->magnetic_field.x;
-    double my = msg->magnetic_field.y;
-    double mz = msg->magnetic_field.z;
-
-    double norm_inv = 1.0 / std::sqrt(mx * mx + my * my);
-    mx *= norm_inv;
-    my *= norm_inv;
-    mz *= norm_inv;
-
-    tf2::Vector3 mag_sensor(mx, my, mz);
-
-    // Rotate into earth frame using current body orientation
-    tf2::Vector3 mag_earth = tf2::quatRotate(
-        tf2_quat.inverse(), mag_sensor); //tf2_quat is an output of imu callback and contains the IMU rotation
-
-    // Compute yaw from horizontal magnetic field
-    double yaw = std::atan2(mag_earth.y(), mag_earth.x());
-
-    tf2::Quaternion q;
-    q.setRotation(tf2::Vector3(0, 0, 1), yaw);
-
-    imu_msg.orientation.x = q.x();
-    imu_msg.orientation.y = q.y();
-    imu_msg.orientation.z = q.z();
-    imu_msg.orientation.w = q.w();
-
-    // Covariance explicitly provided for downstream sensor fusion
-    imu_msg.orientation_covariance = {
-        mag_orientation_cov[0], 0.0, 0.0,
-        0.0, mag_orientation_cov[1], 0.0,
-        0.0, 0.0, mag_orientation_cov[2]
-    };
-
-~~~
-
-</details>
-
-*Click above to see code snippet detailing IMU transformation code.*
-
-
 <video width="80%" controls>
   <source src="path_planning_on_the_beach_.mp4" type="video/mp4">
 </video>
@@ -153,7 +99,74 @@ void KinematicTransformer::magnetometer_callback(
 </details>
 
 <details class="project" markdown="1">
-  <summary>Global Localization Of Spherical Robot Using Factor Graphs (WIP) </summary>
+  <summary>Global Localization of Robot Using Factor Graphs (WIP) </summary>
+  <details class="code" markdown="1">
+  ### Problem Statement
+  After completing the EKF based localization (see other tab) the robot could determine it's own location was but it could not tell where other things were in relation to it. Further it had no understanding of slopes. 
+  
+  ### What I did
+  Assisted in designing waterproof sensor suite including a time of flight sensor and camera for determining ground slope state.
+
+  Used kinematics to gain an understanding of the robot's "wheel odometry" based on the ground slope.
+
+  Used GTSAM to perform SLAM, integrating with our existing ros2/C++ codebases.
+
+  ### Notable Achevements
++ Enabled the use of NAV2 navigation and path planning software on the actual hardware (WIP)
++ Kinematics significantly more accurate on slopes, allowing for a graduate student to develop an algorithm to use motor torques to keep the ball level on the slope.
++
+    
+  <summary><strong>View code snippet</strong></summary>
+
+~~~cpp
+clc
+clear
+
+syms alpha1 alpha2 phi phi_dot psi_dot R omega
+
+% NOTE: ROBOT FRAME NOT EXPRESSED THE SAME WAY IN THE CODE BECAUSE LOCALIZATION WANTS THE TRANSFORM
+% EXPRESSED IN ROBOT FRAME. To express it in this way that the code expresses
+% it, use phi = 0; This accounts for the non-holonomic motion of
+% the robot by altering ground_frame, robot_frame, and
+% ball_rotation_inertial_frame as necessary.
+
+% roration of the robot based on phi
+robot_frame = [1 0 0;
+        0 cos(phi) sin(phi); 
+        0 -sin(phi) cos(phi)];
+% ground frame rotates robot_frame->world_frame
+ground_frame = [cos(alpha1)    sin(alpha1)*sin(alpha2)   sin(alpha1)*cos(alpha2); 
+                            0              cos(alpha2)               -sin(alpha2);
+                            -sin(alpha1)  cos(alpha1)*sin(alpha2)   cos(alpha1)*cos(alpha2)];
+
+%ball rotation inertial frame
+ball_rotation_inertial_frame = [phi_dot; (psi_dot * sin(phi)) + omega; psi_dot * cos(phi)];
+
+%flat to center represented in ground surface frame
+rb_c = [0; 0; R];
+
+%3dof linear velocity expressed before ground transform (no slope)
+linear_velocity_no_slope =  cross(robot_frame.'*ball_rotation_inertial_frame, rb_c);
+linear_velocity_no_slope = simplify(linear_velocity_no_slope)
+
+%3dof linear velocity expressed after transform to world frame (slope)
+linear_velocity_slope = ground_frame.'* cross( robot_frame.'*ball_rotation_inertial_frame, rb_c);
+linear_velocity_slope = simplify(linear_velocity_slope)
+
+%% yaw measurment calc
+syms phi
+
+%Our code disregards the shell roll (phi_dot) in the EKF algo. We instead create a different
+%frame for roll. This helps simplify the urdf among other things.
+phi_dot = 0;
+
+%basic ackerman yaw rate calc
+rpy_vel_no_slope = [0;phi_dot; -omega*sin(phi)];
+
+rpy_vel_slope = ground_frame.'*rpy_vel_no_slope;
+
+~~~
+
 </details>
 
 <details class="project" markdown="1">
@@ -190,6 +203,11 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 <img src="sprayer_mount.png" width="40%">
 
 *Robotic arm–mounted spray system.*
+</details>
+
+<img src="robot_spray_equations.png" width="40%">
+
+*Robotic arm equation that accounts for the circular shape of the mold while maintaining index distance. (Hint: requires changing speed of spinner and tool independently!)*
 </details>
 
 
