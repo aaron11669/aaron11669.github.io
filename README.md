@@ -60,12 +60,10 @@ My professional interests lie in robot–environment interaction. As such, many 
 
 
 
-*Click above to see MATLAB code snippet detailing how I obtained the kinematics for a spherical robot on a slope.*
-<details class="project" markdown="1">
-  
-</details>
 
-  <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
+<details class="project" markdown="1">
+
+<summary>Real Time Localization Of Spherical Robot Using EKF </summary>
 
 ### Problem Statement
 
@@ -97,6 +95,9 @@ Because the platform is a non-traditional rover, the standard configuration requ
 *Foxglove Visualization of Robot Localizing in high bay (URDF Missing/low res = needs to be updated)*
 
 </details>
+
+
+
 
 <details class="project" markdown="1">
   <summary>Global Localization of Robot Using Factor Graphs (WIP) </summary>
@@ -168,6 +169,10 @@ rpy_vel_slope = ground_frame.'*rpy_vel_no_slope;
 ~~~
 
 </details>
+*Click above to see MATLAB code snippet detailing how I obtained the kinematics for a spherical robot on a slope.*
+
+
+
 
 <details class="project" markdown="1">
   <summary>Robot Arm Spraying</summary>
