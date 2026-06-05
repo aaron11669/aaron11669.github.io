@@ -207,7 +207,7 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 
 *Robotic arm–mounted spray system.*
 
-<img src="robot_spray_equations.png" width="40%">
+<img src="robot_spray_equations.png" width="60%">
 
 *Robotic arm equation that accounts for the circular shape of the mold while maintaining index distance. (Hint: requires changing speed of spinner and tool independently!)*
 
