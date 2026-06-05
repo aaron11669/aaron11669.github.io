@@ -58,12 +58,8 @@ My professional interests lie in robot–environment interaction. As such, many 
   <summary>IssacSim Simulation (WIP) </summary>
 </details>
 
-
-
-
 <details class="project" markdown="1">
-
-<summary>Real Time Localization Of Spherical Robot Using EKF </summary>
+  <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
 
 ### Problem Statement
 
@@ -76,6 +72,7 @@ For quick (around 40Hz) localization of the robot, I used a standard robotic loc
 Because the platform is a non-traditional rover, the standard configuration required significant customization. This included transforming IMU and magnetometer measurements into the Earth frame and incorporating platform-specific dynamics into the estimation pipeline to maintain filter consistency at high update rates.
 
 ### Notable Achevements
+
 + Rapid integration and tuning enabled the team to meet aggressive demonstration deadlines
 + Extended EKF cross-covariance logic to enable water detection as a by-product of state estimation
 + Won a paid research contract with the military customer
@@ -96,27 +93,28 @@ Because the platform is a non-traditional rover, the standard configuration requ
 
 </details>
 
-
-
-
 <details class="project" markdown="1">
   <summary>Global Localization of Robot Using Factor Graphs (WIP) </summary>
-  <details class="code" markdown="1">
-  ### Problem Statement
-  After completing the EKF based localization (see other tab) the robot could determine it's own location was but it could not tell where other things were in relation to it. Further it had no understanding of slopes. 
-  
-  ### What I did
-  Assisted in designing waterproof sensor suite including a time of flight sensor and camera for determining ground slope state.
 
-  Used kinematics to gain an understanding of the robot's "wheel odometry" based on the ground slope.
+### Problem Statement
 
-  Used GTSAM to perform SLAM, integrating with our existing ros2/C++ codebases.
+After completing the EKF based localization (see other tab) the robot could determine it's own location was but it could not tell where other things were in relation to it. Further it had no understanding of slopes. 
 
-  ### Notable Achevements
+### What I did
+
+Assisted in designing waterproof sensor suite including a time of flight sensor and camera for determining ground slope state.
+
+Used kinematics to gain an understanding of the robot's "wheel odometry" based on the ground slope.
+
+Used GTSAM to perform SLAM, integrating with our existing ros2/C++ codebases.
+
+### Notable Achevements
+
 + Enabled the use of NAV2 navigation and path planning software on the actual hardware (WIP)
 + Kinematics significantly more accurate on slopes, allowing for a graduate student to develop an algorithm to use motor torques to keep the ball level on the slope.
 +
-    
+
+<details class="code" markdown="1">
   <summary><strong>View code snippet</strong></summary>
 
 ~~~cpp
@@ -165,14 +163,13 @@ phi_dot = 0;
 rpy_vel_no_slope = [0;phi_dot; -omega*sin(phi)];
 
 rpy_vel_slope = ground_frame.'*rpy_vel_no_slope;
-
 ~~~
 
 </details>
+
 *Click above to see MATLAB code snippet detailing how I obtained the kinematics for a spherical robot on a slope.*
 
-
-
+</details>
 
 <details class="project" markdown="1">
   <summary>Robot Arm Spraying</summary>
@@ -186,6 +183,7 @@ Spherical robot shells are manufactured using a spray process. Because this proc
 To improve this process, I replaced manual spraying with a robotic arm–based spraying system. This significantly improved shell consistency, which in turn improved control performance and allowed for the use of a less aggressive controller.
 
 ### Notable Achevements:
+
 + Automated both the spinner and the robot arm using ROS2/C++
 + Derived kinematic equations to achieve different shell thicknesses as a function of spray speed
 + Implemented closed-loop thickness correction using a 3D surface map of the sphere
@@ -208,13 +206,12 @@ To improve this process, I replaced manual spraying with a robotic arm–based s
 <img src="sprayer_mount.png" width="40%">
 
 *Robotic arm–mounted spray system.*
-</details>
 
 <img src="robot_spray_equations.png" width="40%">
 
 *Robotic arm equation that accounts for the circular shape of the mold while maintaining index distance. (Hint: requires changing speed of spinner and tool independently!)*
-</details>
 
+</details>
 
 <details class="project" markdown="1">
   <summary>Pressure Controller</summary>
@@ -255,4 +252,5 @@ I designed and implemented a general-purpose pressure control system for laborat
 </p>
 
 *PCB Layout and Manufactured PCB on Jetson Orin Nano*
+
 </details>
