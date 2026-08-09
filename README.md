@@ -91,9 +91,6 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 ### Notable Achevements
 + Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
 
-<details class="project">
-<summary>Jumping Trajectory Optimization</summary>
-
 ### Some Math
 
 I modeled the robot as an 8-state nonlinear system:
