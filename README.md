@@ -95,19 +95,21 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 
 I modeled the robot as an 8-state nonlinear system:
 
-\[
+</div>\[
 x =
 \begin{bmatrix}
 x_s & z_s & w & \gamma &
 \dot{x}_s & \dot{z}_s & \dot{w} & \dot{\gamma}
 \end{bmatrix}^{T}
-\]
+\]</div>
+
 
 with nonlinear dynamics:
 
-\[
+</div>\[
 \dot{x} = f(x,u)
-\]
+\]</div>
+
 
 <p>For example, the pendulum dynamics during ground contact are:</p>
 
@@ -165,8 +167,6 @@ u_{\min} \leq u \leq u_{\max}
 *THIS VIDEO IS NOT AI-GENERATED. The unusual trajectory is caused by the rapidly shifting center of mass of the internal pendulum.*
 *Video of the robot jumping while stuck against an obstacle. Video of the robot jumping while stuck against an obstacle. I weighted the trajectory optimization cost to favor both backward jump distance and jump height.*
 
-
-</details>
 
 </details>
 
