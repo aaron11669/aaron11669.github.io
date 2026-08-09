@@ -59,11 +59,29 @@ I hope you enjoy looking through my portfolio. I think it demonstrates my abilit
 
 <details class="project" markdown="1">
   <summary>Jumping Spherical Robots with Optimal Controller (WIP) </summary>
+
+### Problem Statement
+
+The robot is liable to get stuck in depressions or loose sand, so we needed a way for the 350 lb robot to get itself out.
+
+### What I did
+
+I modeled the robot in 2D, both while airborne and while in contact with the ground.
+
+I built a simulator to optimize the robot’s states over a trajectory and generate a jumping maneuver. I formulated the cost function using Pontryagin’s Minimum Principle.
+
+I compared and studied two trajectory optimization methods: direct collocation and the shooting method.
+
+I then implemented and tuned a reference-tracking LQR controller on the real robot, successfully executing the jump.
+
+### Notable Achevements
++ Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
+
+### Media
+
+
 </details>
 
-<details class="project" markdown="1">
-  <summary>IssacSim Simulation (WIP) </summary>
-</details>
 
 <details class="project" markdown="1">
   <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
