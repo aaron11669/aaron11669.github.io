@@ -95,38 +95,17 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 
 I modeled the robot as an 8-state nonlinear system:
 
-</div>\[
-x =
-\begin{bmatrix}
-x_s & z_s & w & \gamma &
-\dot{x}_s & \dot{z}_s & \dot{w} & \dot{\gamma}
-\end{bmatrix}^{T}
-\]</div>
+</div>\[ x = \begin{bmatrix} x_s & z_s & w & \gamma & \dot{x}_s & \dot{z}_s & \dot{w} & \dot{\gamma} \end{bmatrix}^{T} \]</div>
 
 
 with nonlinear dynamics:
 
-</div>\[
-\dot{x} = f(x,u)
-\]</div>
+</div>\[ \dot{x} = f(x,u) \]</div>
 
 
 <p>For example, the pendulum dynamics during ground contact are:</p>
 
-<div>
-\[
-\ddot{\gamma}
-=
--\frac{1}{I_{eq}}
-\left[
-m_t u
-+
-m_t d_\gamma(\dot{\gamma}-\dot{w})
-+
-m_p r_p F_c \sin(\gamma)
-\right]
-\]
-</div>
+<div> \[ \ddot{\gamma} = -\frac{1}{I_{eq}} \left[ m_t u + m_t d_\gamma(\dot{\gamma}-\dot{w}) + m_p r_p F_c \sin(\gamma) \right] \] </div>
 
 <p>I formulated trajectory generation as the constrained optimal control problem:
 
@@ -144,11 +123,7 @@ u^T R u + \alpha
 \]
 </div>
 
-<div>
-\[
-u_{\min} \leq u \leq u_{\max}
-\]
-</div>
+<div> \[ u_{\min} \leq u \leq u_{\max} \] </div>
 
 
 ### Media
