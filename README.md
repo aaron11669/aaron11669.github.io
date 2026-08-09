@@ -72,12 +72,27 @@ I built a simulator to optimize the robot’s states over a trajectory and gener
 
 I compared and studied two trajectory optimization methods: direct collocation and the shooting method.
 
-I then implemented and tuned a reference-tracking LQR controller on the real robot, successfully executing the jump.
+I then implemented and tuned a reference-tracking LQR controller on the real robot, successfully executing the jump. Much of the reference-tracking LQR implementation and spline-generation work was completed by my fantastic summer intern, David Boosi.
 
 ### Notable Achevements
 + Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
 
 ### Media
+
+<video width="80%" controls>
+  <source src="swing_up_jump" type="video/mp4">
+</video>
+
+*Video of the robot jumping from flat, unobstructed ground. The controller behaves similarly to a swing-up controller.*
+
+
+<video width="80%" controls>
+  <source src="static_jump" type="video/mp4">
+</video>
+
+*THIS VIDEO IS NOT AI-GENERATED. The unusual trajectory is caused by the rapidly shifting center of mass of the internal pendulum.
+
+Video of the robot jumping while stuck against an obstacle. I optimized the maneuver to maximize both backward distance and jump height.*
 
 
 </details>
