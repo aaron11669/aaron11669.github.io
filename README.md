@@ -91,27 +91,27 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 ### Notable Achevements
 + Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
 
-### Some Math
+### Math and General Approach
 
 I modeled the robot as an 8-state nonlinear system:
 
-\[
+$$
 x =
 \begin{bmatrix}
 x_s & z_s & w & \gamma &
 \dot{x}_s & \dot{z}_s & \dot{w} & \dot{\gamma}
 \end{bmatrix}^{T}
-\]
+$$
 
-with nonlinear dynamics
+with nonlinear dynamics:
 
-\[
-\dot{x} = f(x,u).
-\]
+$$
+\dot{x} = f(x,u)
+$$
 
-For example, the pendulum dynamics during ground contact are
+For example, the pendulum dynamics during ground contact are:
 
-\[
+$$
 \ddot{\gamma}
 =
 -\frac{1}{I_{eq}}
@@ -121,14 +121,13 @@ m_t u
 m_t d_\gamma(\dot{\gamma}-\dot{w})
 +
 m_p r_p F_c \sin(\gamma)
-\right].
-\]
+\right]
+$$
 
-I formulated trajectory generation as the constrained optimal control problem
+I formulated trajectory generation as the constrained optimal control problem:
 
-\[
+$$
 \min_u
-\quad
 \left(x(t_f)-x^\star\right)^T
 Q_f
 \left(x(t_f)-x^\star\right)
@@ -137,13 +136,13 @@ Q_f
 \left(
 u^T R u + \alpha
 \right)\,dt
-\]
+$$
 
-subject to
+subject to:
 
-\[
-u_{\min} \le u \le u_{\max}.
-\]
+$$
+u_{\min} \leq u \leq u_{\max}
+$$
 
 ### Media
 
