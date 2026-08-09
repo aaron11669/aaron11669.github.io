@@ -58,7 +58,7 @@ I hope you enjoy looking through my portfolio. I think it demonstrates my abilit
 </details>
 
 <details class="project" markdown="1">
-  <summary>Jumping Spherical Robots with Optimal Controller (WIP) </summary>
+  <summary>Jumping Spherical Robots with Optimal Controller </summary>
 
 ### Problem Statement
 
@@ -83,7 +83,7 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
   <source src="swing_up_jump.mp4" type="video/mp4">
 </video>
 
-*Video of the robot jumping from flat, unobstructed ground. The controller behaves similarly to a swing-up controller.*
+*Video of the robot jumping from flat, unobstructed ground. The controller behaves similarly to a swing-up controller to build momentum then performs a jump optimized for height.*
 
 
 <video width="80%" controls>
