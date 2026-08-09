@@ -40,9 +40,16 @@ details.project[open] {
 
 <img src="portrait.png" width="60%">
 
-I'm currently a Research Engineer II at the Texas A&M University Engineering Experiment Station working in the Robotics and Automation Design Lab. I have a B.S. in Mechanical Engineering from the University of California, Irvine. I am aproximately halfway through my part-time aerospace engineering master’s degree at Purdue University, where I am specializing in autonomy and control systems. Previously, I was an Operations Engineer at a robotics startup called Stellar Pizza. Before that, I interned at Tesla, SpaceX, and Northrop Grumman, primarily working on test engineering.
+I'm currently a Research Engineer II at the Texas A&M University Engineering Experiment Station working in the Robotics and Automation Design Lab. I have a B.S. in Mechanical Engineering from the University of California, Irvine. 
 
-My professional interests lie in robot–environment interaction. As such, many of my projects involve utilizing my understanding of control systems, perception/sensing, localization, and path planning. I am also particularly interested in optimization-based approaches like model predictive control and graph-based localization.
+I am aproximately halfway through my part-time aerospace engineering master’s degree at Purdue University, where I am specializing in autonomy and control systems. 
+
+Previously, I was an Operations Engineer at a robotics startup called Stellar Pizza. Before that, I interned at Tesla, SpaceX, and Northrop Grumman.
+
+My professional interests are in control systems, perception and sensing, and localization/state estimation. I have experience with system identification, optimal control, classical controls, Kalman filtering, and related methods.
+
+I hope you enjoy looking through my portfolio. I think it demonstrates my ability to get things done quickly and efficiently by leaning on a strong understanding of both the underlying methods and the hardware and software stack.
+
 
 # Projects
 
