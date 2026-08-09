@@ -80,14 +80,14 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 ### Media
 
 <video width="80%" controls>
-  <source src="swing_up_jump" type="video/mp4">
+  <source src="swing_up_jump.mp4" type="video/mp4">
 </video>
 
 *Video of the robot jumping from flat, unobstructed ground. The controller behaves similarly to a swing-up controller.*
 
 
 <video width="80%" controls>
-  <source src="static_jump" type="video/mp4">
+  <source src="static_jump.mp4" type="video/mp4">
 </video>
 
 *THIS VIDEO IS NOT AI-GENERATED. The unusual trajectory is caused by the rapidly shifting center of mass of the internal pendulum.*
