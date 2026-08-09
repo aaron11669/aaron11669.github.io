@@ -90,9 +90,8 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
   <source src="static_jump" type="video/mp4">
 </video>
 
-*THIS VIDEO IS NOT AI-GENERATED. The unusual trajectory is caused by the rapidly shifting center of mass of the internal pendulum.
-
-Video of the robot jumping while stuck against an obstacle. I optimized the maneuver to maximize both backward distance and jump height.*
+*THIS VIDEO IS NOT AI-GENERATED. The unusual trajectory is caused by the rapidly shifting center of mass of the internal pendulum.*
+*Video of the robot jumping while stuck against an obstacle. I optimized the maneuver to maximize both backward distance and jump height.*
 
 
 </details>
