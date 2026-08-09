@@ -91,6 +91,78 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 ### Notable Achevements
 + Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
 
+### Math
+
+### Math and General Approach
+
+I modeled the robot as an 8-state nonlinear system,
+
+$$
+x =
+\begin{bmatrix}
+x_s & z_s & w & \gamma &
+\dot{x}_s & \dot{z}_s & \dot{w} & \dot{\gamma}
+\end{bmatrix}^{T},
+\qquad
+\dot{x}=f(x,u)
+$$
+
+with coupled shell and pendulum dynamics. For example, during ground contact:
+
+$$
+\ddot{x}*s =
+-\frac{m_p r_p}{D}
+\left[
+m_t\cos\gamma,u
++
+m_t d*\gamma\cos\gamma(\dot{\gamma}-\dot{w})
++
+I_{eq}\dot{\gamma}^2\sin\gamma
+------------------------------
+
+\frac{1}{2}m_p r_pF_c\sin 2\gamma
+\right]
+$$
+
+$$
+\ddot{\gamma}
+=============
+
+-\frac{1}{I_{eq}}
+\left[
+m_tu
++
+m_td_\gamma(\dot{\gamma}-\dot{w})
++
+m_pr_pF_c\sin\gamma
+\right].
+$$
+
+I then formulated trajectory generation as the constrained optimal control problem
+
+$$
+\min_u
+\quad
+\underbrace{
+\left(x(t_f)-x^\star\right)^TQ_f
+\left(x(t_f)-x^\star\right)
+}*{\text{desired final state}}
++
+\int*{t_0}^{t_f}
+\left(
+\underbrace{u^TRu}*{\text{control effort}}
++
+\underbrace{\alpha}*{\text{maneuver time}}
+\right)dt
+$$
+
+$$
+\text{subject to}\qquad
+u_{\min}\leq u\leq u_{\max}.
+$$
+
+I solved this using both a Pontryagin's Minimum Principle / shooting approach and direct collocation, then used the optimized trajectory as the reference for the controller on the real robot.
+
 ### Media
 
 <video width="80%" controls>
