@@ -168,6 +168,7 @@ u_{\min} \leq u \leq u_{\max}
 
 </details>
 
+</details>
 
 <details class="project" markdown="1">
   <summary>Real Time Localization Of Spherical Robot Using EKF </summary>
