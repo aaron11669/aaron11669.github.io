@@ -92,8 +92,6 @@ I then implemented and tuned a reference-tracking LQR controller on the real rob
 + Jumped a 350lb 6ft diameter robot 8"-1' in the air (depending on the scenario).
 
 
-
-
 ### Media
 
 <video width="80%" controls>
