@@ -148,7 +148,6 @@ u_{\min} \leq u \leq u_{\max}
 \]
 </div>
 
-</details>
 
 ### Media
 
